@@ -1,7 +1,7 @@
 # Setup
 title:               BurntxNoodle
-tagline:             'CompSci Student, Cybersecurity Speciality'
-description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+tagline:             'CompSci Student, Specialized in Security'
+description:         'Welcome to my blog page, most things within here are mainly about topics in information security. See below for the list of difference section.'
 url:                 
 baseurl:             '/blog'
 paginate:            5
