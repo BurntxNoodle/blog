@@ -7,6 +7,7 @@ title: Welcome
 	Click the menu sidebar ☰ on the left to check out different areas of this webpage. See below for a description of the different sections.
 </p>
 
+## About Me
 I'm currently a student studying Computer Science with an interest in information security: Digital Forensics/Incident Response, Red Teaming/Pentesting, and Exploit Development. 
 
 I learn by doing hands-on activities such as CTF so you can find write-ups for CTF challenges and HackTheBox challenges in here. Doing write-ups helps me remember what I learn and it ensures that I fully understand the topic. Documenting what I learn also helps me share what I learned that might be useful to others.
