@@ -9,10 +9,10 @@ From the [creators of the OSCP certification and Kali Linux](https://www.offensi
 
 > Well-designed mitigation strategies need routine security tests. The best tests simulate the techniques and methods of an intruder. By encouraging students to use the same tools, techniques, and mindset as a hacker, we level the playing field for defenders.
 
-* [What is Offensive Security? Penetration Testing vs. Red Teaming]()
-* [Hands-on Learning]()
-* [Networking Notes]()
-* [General List of Resources]()
+* [Penetration Testing vs. Red Teaming](https://burntxnoodle.github.io/blog/redteam/#what-is-offensive-security)
+* [HackTheBox](https://burntxnoodle.github.io/blog/redteam/#hands-on-learning)
+* [Networking Notes](https://burntxnoodle.github.io/blog/redteam/#networking)
+* [General List of Resources](https://burntxnoodle.github.io/blog/redteam/#more-resources)
 
 <br>
 
@@ -37,9 +37,9 @@ TL;DR: Red Teaming is a more careful, quiet approach with the same goals as a Pe
 
 <br>
 
-### Hands-on Learning
+## Hands-on Learning
 
-## HackTheBox
+### HackTheBox
 To practice offensive security, there are a couple great sites to hone and improve skills. The website I primarily practice with is [HackTheBox](https://www.hackthebox.eu/) (HTB). Offering multiple systems and operating systems to hack your way through, HTB provides some good learning material for free. New boxes are released regularly and anyone can try them out, after a few months the box 'retires' and is replaced by a new box. VIP can be purchased to be on servers with less people and to practice on retired boxes.
 
 Writeups can only be done on retired machines, below is a list of HackTheBox writeups I've done.
@@ -73,6 +73,9 @@ Writeups can only be done on retired machines, below is a list of HackTheBox wri
 ## Networking
 Below is a list of basic networking notes I've taken.
 
+(coming soon)
+
+<br>
+
 ## More Resources
-
-
+(coming soon)
