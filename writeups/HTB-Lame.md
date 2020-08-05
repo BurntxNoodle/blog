@@ -5,8 +5,6 @@ title: HackTheBox Lame
 
 HTB Lame is a starter level machine that can be easily exploited using metasploit and some googling. Samba SMB (server message block) is a vulnerable process that in this challenge, was used to get root access into the machine using a metasploit module. To exploit this box, you just need to know basic enumeration, linux services, and some googling.
 
-Read the full writeup [here](https://burntxnoodle.github.io/writeups/HTB-Lame/).
-
 ### Enumeration 
 Using ```zenmap``` or doing ```nmap -sC -sV 10.10.10.3``` will reveal a few things:
 
