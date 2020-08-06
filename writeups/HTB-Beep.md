@@ -1,3 +1,8 @@
+---
+layout: page
+title: HackTheBox Beep Writeup
+---
+
 Beep is a box that requires a good amount of initial enumeration as there are lots of services running on the system. However, knowing how to enumerate each of the servies well and doing some research on the public facing services, one is able to get intial access and later pivot to a root user. This writeup goes over going from no initial access, to getting an initial shell, to getting root. 
 
 ### Enumeration
