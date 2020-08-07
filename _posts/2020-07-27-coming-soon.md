@@ -3,4 +3,4 @@ layout: page
 title: Coming Soon
 ---
 
-Website is currently under construction.
+Currently still in the process of moving all writeups/posts/notes to this page.
