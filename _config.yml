@@ -1,7 +1,7 @@
 # Setup
 title:               BurntxNoodle
 tagline:             'CompSci Student, Specialized in Security'
-description:         '<p style="color:white">Welcome to the page!</p>Most of the content here are about topics in information security. See below for the list of different sections. <br> <br> <a href="https://burntxnoodle.github.io/" target="_blank">Click here</a> to go to the homepage.'
+description:         '<p style="color:white">Welcome to the page!<br><br>I'm still in the process of moving over all my writeups and content to this site.</p>Most of the content here are about topics in information security. See below for the list of different sections. <br> <br> <a href="https://burntxnoodle.github.io/" target="_blank">Click here</a> to go to the homepage.'
 url:                 
 baseurl:             '/'
 paginate:            5
