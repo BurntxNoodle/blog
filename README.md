@@ -2,4 +2,4 @@
 
 This contains all the files that are hosted on my gitpages.
 
-[View my blog here.](https://burntxnoodle.github.io/blog/home)
+[View my blog here.](https://burntxnoodle.github.io/)
