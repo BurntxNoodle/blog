@@ -9,4 +9,4 @@ Resolute is a Windows box that features two users where the first user is used t
 * Plaintext credentials of other users are found under the “PSTranscripts” directory
 * Incorrect group settings/policies
 
-Read the full writeup [here](https://burntxnoodle.github.io/writeups/HTB-Resolute/).
+Read the full writeup [here](https://burntxnoodle.github.io/writeups/HTB-Resolute.pdf).
