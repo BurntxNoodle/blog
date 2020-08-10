@@ -36,8 +36,6 @@ This page will contain a high-level overview of general attack paths/vectors tha
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
 </p>
 
-# Reconnaissance and Enumeration
-
 ### General nmap scan
 `nmap -sC -sV -oA resolute 10.10.10.169`
 
