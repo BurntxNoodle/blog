@@ -11,7 +11,7 @@ This page will contain a high-level overview of general attack paths/vectors tha
 
 ## Reconnaissance and Enumeration
 
-* [General nmap scan]()
+* [General nmap scan](https://burntxnoodle.github.io/AttackPathsAndCommands/#general-nmap-scan)
 * [Nmap scan for all ports]()
 * [General zenmap scan]()
 * [Using gobuster to brute-force URIs]()
@@ -32,7 +32,13 @@ This page will contain a high-level overview of general attack paths/vectors tha
 
 ## Post Exploitation 
 
-##### General nmap scan
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
+</p>
+
+# Reconnaissance and Enumeration
+
+### General nmap scan
 `nmap -sC -sV -oA resolute 10.10.10.169`
 
 ![image](https://user-images.githubusercontent.com/41026969/89837667-702e7b00-db37-11ea-9c5e-fb19e0846ad4.png)
@@ -44,16 +50,16 @@ This page will contain a high-level overview of general attack paths/vectors tha
 * `resolute`: Base name for the output files. In this case, it will write results to a file named `resolute.nmap` (with two additional formats)
 * `10.10.10.169`: IP address that will be scanned
 
-##### Nmap scan for all ports
+### Nmap scan for all ports
 
-##### General zenmap scan
+### General zenmap scan
 
-##### Using gobuster to brute-force URIs
+### Using gobuster to brute-force URIs
 
-##### Using dirb to brute-force URIs
+### Using dirb to brute-force URIs
 
-##### Using dirbuster to brute-force URIs
+### Using dirbuster to brute-force URIs
 
-##### Using wfuzz to fuzz potential files
+### Using wfuzz to fuzz potential files
 
-##### Using wfuzz to fuzz subdomains
+### Using wfuzz to fuzz subdomains
