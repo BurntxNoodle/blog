@@ -32,18 +32,28 @@ This page will contain a high-level overview of general attack paths/vectors tha
 
 ## Post Exploitation 
 
-###### General nmap scan
+##### General nmap scan
+`nmap -sC -sV -oA resolute 10.10.10.169`
 
-###### Nmap scan for all ports
+![image](https://user-images.githubusercontent.com/41026969/89837667-702e7b00-db37-11ea-9c5e-fb19e0846ad4.png)
 
-###### General zenmap scan
+* `nmap`: The tool being used
+* `-sC`: Use default scripts
+* `-sV`: Probe the open ports found to find and determine service/version information
+* `-oA`: Output all formats (`<NAME>.nmap` is the text based output)
+* `resolute`: Base name for the output files. In this case, it will write results to a file named `resolute.nmap` (with two additional formats)
+* `10.10.10.169`: IP address that will be scanned
 
-###### Using gobuster to brute-force URIs
+##### Nmap scan for all ports
 
-###### Using dirb to brute-force URIs
+##### General zenmap scan
 
-###### Using dirbuster to brute-force URIs
+##### Using gobuster to brute-force URIs
 
-###### Using wfuzz to fuzz potential files
+##### Using dirb to brute-force URIs
 
-###### Using wfuzz to fuzz subdomains
+##### Using dirbuster to brute-force URIs
+
+##### Using wfuzz to fuzz potential files
+
+##### Using wfuzz to fuzz subdomains
