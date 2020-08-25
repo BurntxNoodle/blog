@@ -9,10 +9,10 @@ From the [creators of the OSCP certification and Kali Linux](https://www.offensi
 
 > Well-designed mitigation strategies need routine security tests. The best tests simulate the techniques and methods of an intruder. By encouraging students to use the same tools, techniques, and mindset as a hacker, we level the playing field for defenders.
 
-* [Penetration Testing vs. Red Teaming](https://burntxnoodle.github.io/RedTeam/#what-is-offensive-security)
-* [HackTheBox](https://burntxnoodle.github.io/RedTeam/#hands-on-learning)
-* [Networking Notes](https://burntxnoodle.github.io/RedTeam/#networking)
-* [General List of Resources](https://burntxnoodle.github.io/RedTeam/#more-resources)
+* [Penetration Testing vs. Red Teaming](https://securitynoodle.github.io/RedTeam/#what-is-offensive-security)
+* [HackTheBox](https://securitynoodle.github.io/RedTeam/#hands-on-learning)
+* [Networking Notes](https://securitynoodle.github.io/RedTeam/#networking)
+* [General List of Resources](https://securitynoodle.github.io/RedTeam/#more-resources)
 
 <br>
 
