@@ -16,4 +16,4 @@ getting root access:
 * Finding a way to retrieve the file before it gets deleted.
 * Knowing how to decrypt the hashed root password.
 
-Read the full writeup [here](https://burntxnoodle.github.io/writeups/HTB-Obscurity.pdf).
+Read the full writeup [here](https://securitynoodle.github.io/writeups/HTB-Obscurity.pdf).
