@@ -13,4 +13,4 @@ OpenAdmin is a box with an easy to medium level process of obtaining the user cr
 * User Joanna can do a sudo command without supplying a password.
 
 
-Read the full writeup [here](https://burntxnoodle.github.io/writeups/HTB-OpenAdmin.pdf).
+Read the full writeup [here](https://securitynoodle.github.io/writeups/HTB-OpenAdmin.pdf).
