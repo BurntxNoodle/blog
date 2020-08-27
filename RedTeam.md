@@ -42,31 +42,9 @@ TL;DR: Red Teaming is a more careful, quiet approach with the same goals as a Pe
 ### HackTheBox
 To practice offensive security, there are a couple great sites to hone and improve skills. The website I primarily practice with is [HackTheBox](https://www.hackthebox.eu/) (HTB). Offering multiple systems and operating systems to hack your way through, HTB provides some good learning material for free. New boxes are released regularly and anyone can try them out, after a few months the box 'retires' and is replaced by a new box. VIP can be purchased to be on servers with less people and to practice on retired boxes.
 
-Writeups can only be done on retired machines, below is a list of HackTheBox writeups I've done.
+Writeups can only be done on retired machines, below is the link for HackTheBox writeups I've done. Reading walkthroughs is great for developing methodology, enhancing skills, and it exposes you to different tools and exploits. Alternatively you can go to the [main page](https://securitynoodle.github.io/) and see the most recent posts and activities that may include HackTheBox writeups. 
 
-[Click here]() for the writeups.
-
-* Access 
-* Bashed 
-* Beep 
-* Blocky 
-* Blue 
-* Devel 
-* Grandpa 
-* Granny 
-* Jerry 
-* Lame 
-* Legacy 
-* Mirai 
-* Netmon 
-* Nibbles 
-* Obscurity 
-* OpenAdmin 
-* Optimum 
-* Resolute 
-* Sense 
-* Shocker 
-* Tenten 
+[Click here](https://securitynoodle.github.io/HackTheBox/) to get to my HackTheBox page.
 
 <br>
 
