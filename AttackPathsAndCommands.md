@@ -20,15 +20,31 @@ This page will contain a high-level overview of general attack paths/vectors tha
 * [Using wfuzz to find subdomains](https://securitynoodle.github.io/AttackPathsAndCommands/#using-wfuzz-to-find-subdomains)
 * [Using sublist3r to find subdomains](https://securitynoodle.github.io/AttackPathsAndCommands/#using-sublist3r-to-find-subdomains)
 
-## Initial Access, Execution, and File Transfers
+## Initial Access, Execution
+
+* [Linux] Is the Tomcat version < (insert version here)
+* [Linux] 
+* [Linux & Windows] Check for SQL injection
+* [Windows] Is SMB exposed (eternal blue)
+* [Windows] Is IIS version < (insert version here)
+
 
 ## Privilege Escalation
+* [Linux] Checking sudo commands that don't require password
+* [Windows] Is savecred allowed
+* [Windows] Is DNSAdmin 
 
 ## Discovery
+* [Linux] Checking listening ports
+* [Linux] Checking for files owned/accessible
+* [Windows] Checking what group a user is apart of in PowerShell
+* [Windows] Checking users in a group in PowerShell
 
 ## Lateral Movement
+* [Windows] Using Mimikatz
+* [Windows] Using BloodHound
 
-## Exfiltration
+## Exfiltration and File Transferring
 
 ## Post Exploitation 
 
@@ -79,8 +95,29 @@ Example: `gobuster dir -u http://10.10.10.75/nibbleblog/ -w /usr/share/wordlists
 * `-t 100`: Number of threads to use which in this example is `100`
 
 ### Using dirb to brute-force URIs
+`dirb <url> <wordlist>`
+
+Example: `dirb http://10.10.10.75/nibbleblog /usr/share/wordlists/dirb/common.txt`
+
+![image](https://user-images.githubusercontent.com/41026969/91897178-e53d2e00-ec67-11ea-8857-00595b757817.png)
+
+* `dirb`: The tool being used
+* `http://10.10.10.75/nibbleblog`: The base URL to check against
+* `/usr/share/wordlists/dirb/common.txt`: The wordlist to use
+
+##### Note:
+This tool slow as heck. Use gobuster or dirbuster.
 
 ### Using dirbuster to brute-force URIs
+Dirbuster is the GUI version of dirb, to bring it up by either searching for `dirbuster` in the kali linux start menu or by typing `dirbuster` in the terminal. 
+
+The fields are pretty self-explanatory, here's an example of the fields being filled out for the same example as above:
+
+![image](https://user-images.githubusercontent.com/41026969/91897439-4bc24c00-ec68-11ea-8b30-15640ab5ccb2.png)
+
+After clicking the `Start` button on the bottom left, I like to go to the `Results - Tree View` tab to see what dirbuster finds.
+
+![image](https://user-images.githubusercontent.com/41026969/91897710-b1163d00-ec68-11ea-8876-9ef7c3df7999.png)
 
 ### Using wfuzz to fuzz potential files or URIs
 `wfuzz --hc 404 -Z -w <wordlist> -u <domain>/FUZZ/<file name>`
