@@ -55,6 +55,8 @@ This page will contain a high-level overview of general attack paths, vectors an
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
 </p>
 
+# Reconnaissance and Enumeration Commands
+
 ### General nmap scan
 `nmap -sC -sV -oA <name> <address>`
 
@@ -169,6 +171,8 @@ Example: `python3 sublist3r.py -d cyberspacekittens.com`
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
 </p>
 
+# Privilege Escalation Commands
+
 ### Checking sudo commands that do not require password
 `sudo -l`
 
@@ -206,10 +210,23 @@ To change mode, simply type `binary` in the FTP shell. So if you wanted to get a
 * .asp
 * .html
 * .php
+* (Generally text-based files, such as source code, web pages, etc.)
 
 ##### Examples of file types to use Binary Mode
-* .wav
 * .jpg
 * .gif
+* .wave
 * .mp3
+* .mp4
+* .mov
+* .zip
+* .tar
 * .mdb
+* .exe
+* .doc
+* .pdf
+* (Generally image files, sound files, video files, archive files, etc.)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
+</p>
