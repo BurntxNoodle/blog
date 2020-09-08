@@ -7,7 +7,7 @@ title: Attack Paths and Commands
 
 ## What is this page?
 
-This page will contain a high-level overview of general attack paths/vectors that I've encountered from activities such as HackTheBox and VulnHub. Additionally, this page will have a checklist of commands that maps out to each of its respective attack path. For ease of use and organization, each of the attack paths and their commands are organized based on the [MITRE ATT&CK](https://attack.mitre.org/) framework.
+This page will contain a high-level overview of general attack paths, vectors and commands that I've utilized from activities such as HackTheBox and VulnHub. For organization and ease of use, each of the attack paths and their commands are organized based on the [MITRE ATT&CK](https://attack.mitre.org/) framework.
 
 ## Reconnaissance and Enumeration
 
@@ -22,25 +22,26 @@ This page will contain a high-level overview of general attack paths/vectors tha
 
 ## Initial Access, Execution
 
-* [Linux] Is the Tomcat version < (insert version here)
-* [Linux] 
 * [Linux & Windows] Check for SQL injection
 * [Windows] Is SMB exposed (eternal blue)
 * [Windows] Is IIS version < (insert version here)
 
 
 ## Privilege Escalation
-* [Linux] Checking sudo commands that don't require password
+
+* [[Linux] Checking sudo commands that do not require password](https://securitynoodle.github.io/AttackPathsAndCommands/#checking-sudo-commands-that-do-not-require-password)
 * [Windows] Is savecred allowed
 * [Windows] Is DNSAdmin 
 
 ## Discovery
+
 * [Linux] Checking listening ports
 * [Linux] Checking for files owned/accessible
 * [Windows] Checking what group a user is apart of in PowerShell
 * [Windows] Checking users in a group in PowerShell
 
 ## Lateral Movement
+
 * [Windows] Using Mimikatz
 * [Windows] Using BloodHound
 
@@ -162,3 +163,18 @@ Example: `python3 sublist3r.py -d cyberspacekittens.com`
 * `python3 sublist3r.py`: This program is a python3 script, so use python3
 * `-d cyberspacekittens.com`: `-d` specifies the domain to check, in this example `cyberspacekittens.com`
 
+### Checking sudo commands that do not require password
+`sudo -l`
+
+Example:
+![image](https://user-images.githubusercontent.com/41026969/92505030-76b12080-f1d1-11ea-96c3-c1a098649f32.png)
+
+In this example, you can see the user can run the command `sudo /bin/nano /opt/priv` as sudo without supplying a password.
+
+Nano can spawn a shell, and since it's running under sudo, it will spawn a shell as sudo [source here](https://gtfobins.github.io/gtfobins/nano/#shell).
+
+```
+nano
+^R^X
+reset; sh 1>&0 2>&0
+```
