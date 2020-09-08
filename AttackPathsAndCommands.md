@@ -22,7 +22,7 @@ This page will contain a high-level overview of general attack paths, vectors an
 
 ## Initial Access, Execution
 
-* [Linux & Windows] Check for SQL injection
+* Check for SQL injection
 * [Windows] Is SMB exposed (eternal blue)
 * [Windows] Is IIS version < (insert version here)
 
@@ -46,6 +46,8 @@ This page will contain a high-level overview of general attack paths, vectors an
 * [Windows] Using BloodHound
 
 ## Exfiltration and File Transferring
+
+* [Downloading files from FTP](https://securitynoodle.github.io/AttackPathsAndCommands/#downloading-files-from-ftp)
 
 ## Post Exploitation 
 
@@ -163,6 +165,10 @@ Example: `python3 sublist3r.py -d cyberspacekittens.com`
 * `python3 sublist3r.py`: This program is a python3 script, so use python3
 * `-d cyberspacekittens.com`: `-d` specifies the domain to check, in this example `cyberspacekittens.com`
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
+</p>
+
 ### Checking sudo commands that do not require password
 `sudo -l`
 
@@ -178,3 +184,32 @@ nano
 ^R^X
 reset; sh 1>&0 2>&0
 ```
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
+</p>
+
+# Exfiltration and File Transferring Commands
+
+### Downloading files from FTP
+##### Note: it's important to distinguish if you need to utilize FTP's ASCII mode or Binary mode, examples of file types that should be used for each mode is listed below. When initially connected to FTP, ASCII mode is the default mode.
+
+`get "file_name"`
+
+Example: `get "Access Control.zip"`
+
+To change mode, simply type `binary` in the FTP shell. So if you wanted to get a file in binary mode:
+* `> binary`
+* `> get "backup.mdb"`
+
+##### Examples of file types to use ASCII Mode
+* .txt
+* .asp
+* .html
+* .php
+
+##### Examples of file types to use Binary Mode
+* .wav
+* .jpg
+* .gif
+* .mp3
+* .mdb
