@@ -11,14 +11,14 @@ This page will contain a high-level overview of general attack paths, vectors an
 
 ## Reconnaissance and Enumeration
 
-* [General nmap scan](https://securitynoodle.github.io/AttackPathsAndCommands/#general-nmap-scan)
-* [Nmap scan for all ports](https://securitynoodle.github.io/AttackPathsAndCommands/#nmap-scan-for-all-ports)
-* [Using gobuster to brute-force URIs](https://securitynoodle.github.io/AttackPathsAndCommands/#using-gobuster-to-brute-force-uris)
-* [Using dirb to brute-force URIs](https://securitynoodle.github.io/AttackPathsAndCommands/#using-dirb-to-brute-force-uris)
-* [Using dirbuster to brute-force URIs](https://securitynoodle.github.io/AttackPathsAndCommands/#using-dirbuster-to-brute-force-uris)
-* [Using wfuzz to fuzz potential files or URIs](https://securitynoodle.github.io/AttackPathsAndCommands/#using-wfuzz-to-fuzz-potential-files-or-uris)
-* [Using wfuzz to find subdomains](https://securitynoodle.github.io/AttackPathsAndCommands/#using-wfuzz-to-find-subdomains)
-* [Using sublist3r to find subdomains](https://securitynoodle.github.io/AttackPathsAndCommands/#using-sublist3r-to-find-subdomains)
+* [General nmap scan](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#general-nmap-scan)
+* [Nmap scan for all ports](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#nmap-scan-for-all-ports)
+* [Using gobuster to brute-force URIs](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-gobuster-to-brute-force-uris)
+* [Using dirb to brute-force URIs](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-dirb-to-brute-force-uris)
+* [Using dirbuster to brute-force URIs](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-dirbuster-to-brute-force-uris)
+* [Using wfuzz to fuzz potential files or URIs](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-wfuzz-to-fuzz-potential-files-or-uris)
+* [Using wfuzz to find subdomains](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-wfuzz-to-find-subdomains)
+* [Using sublist3r to find subdomains](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-sublist3r-to-find-subdomains)
 
 ## Initial Access, Execution
 
@@ -29,7 +29,7 @@ This page will contain a high-level overview of general attack paths, vectors an
 
 ## Privilege Escalation
 
-* [[Linux] Checking sudo commands that do not require password](https://securitynoodle.github.io/AttackPathsAndCommands/#checking-sudo-commands-that-do-not-require-password)
+* [[Linux] Checking sudo commands that do not require password](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-sudo-commands-that-do-not-require-password)
 * [Windows] Is savecred allowed
 * [Windows] Is DNSAdmin 
 
@@ -47,7 +47,7 @@ This page will contain a high-level overview of general attack paths, vectors an
 
 ## Exfiltration and File Transferring
 
-* [Downloading files from FTP](https://securitynoodle.github.io/AttackPathsAndCommands/#downloading-files-from-ftp)
+* [Downloading files from FTP](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#downloading-files-from-ftp)
 
 ## Post Exploitation 
 
@@ -128,7 +128,7 @@ After clicking the `Start` button on the bottom left, I like to go to the `Resul
 `wfuzz --hc 404 -Z -w <wordlist> -u <domain>/FUZZ/<file name>`
 
 ##### Context: 
-In the HackTheBox challenge [Obscurity](https://securitynoodle.github.io/HackTheBox/#hackthebox-obscurity), I am given that there is a file named `SuperSecureServer.py` in a secret directory on the server. So I know that there HAS to be some URL that exists that looks like `http://10.10.10.168:8080/SOMETHING/SuperSecretServer.py` where `SOMETHING` is the directory that we need to find out. To find out that directory, we use wfuzz!
+In the HackTheBox challenge [Obscurity](https://securitynoodle.github.io/RedTeam/HackTheBox/#hackthebox-obscurity), I am given that there is a file named `SuperSecureServer.py` in a secret directory on the server. So I know that there HAS to be some URL that exists that looks like `http://10.10.10.168:8080/SOMETHING/SuperSecretServer.py` where `SOMETHING` is the directory that we need to find out. To find out that directory, we use wfuzz!
 
 Example `wfuzz --hc 404 -Z -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
 -u http://10.10.10.168:8080/FUZZ/SuperSecureServer.py`
