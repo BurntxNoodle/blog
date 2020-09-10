@@ -2,6 +2,7 @@
 layout: page
 title: Attack Paths and Commands
 ---
+Last updated: 9/10/2020
 
 # 🚧 Project in progress 🚧
 
@@ -37,8 +38,8 @@ This page will contain a high-level overview of general attack paths, vectors an
 
 * [Linux] Checking listening ports
 * [Linux] Checking for files owned/accessible
-* [Windows] Checking what group a user is apart of in PowerShell
-* [Windows] Checking users in a group in PowerShell
+* [[Windows] Checking what groups a user is in](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-what-groups-a-user-is-in)
+* [[Windows] Checking what users are in an Active Directory group](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-what-users-are-in-an-active-directory-group)
 
 ## Lateral Movement
 
@@ -192,12 +193,29 @@ reset; sh 1>&0 2>&0
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
 </p>
 
+# Discovery
+
+### Checking what groups a user is in 
+`net user <user name> /domain`
+
+Example: `net user ryan /domain`
+
+### Checking what users are in an Active Directory group
+`Get-ADGroupMember <AD group> | select name`
+
+Example: `Get-ADGroupMember Contractors | select name`
+* Get all members of the `Contractors` AD group, then from that list only output the names.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
+</p>
+
 # Exfiltration and File Transferring Commands
 
 ### Downloading files from FTP
 ##### Note: it's important to distinguish if you need to utilize FTP's ASCII mode or Binary mode, examples of file types that should be used for each mode is listed below. When initially connected to FTP, ASCII mode is the default mode.
 
-`get "file_name"`
+`get "<file name>"`
 
 Example: `get "Access Control.zip"`
 
