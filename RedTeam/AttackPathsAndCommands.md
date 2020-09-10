@@ -199,12 +199,13 @@ reset; sh 1>&0 2>&0
 `net user <user name> /domain`
 
 Example: `net user ryan /domain`
+* Gets information on the user `ryan` on the primary domain. The groups will be listed under `Global Group Memberships` and/or `Local Group Memberships`.
 
 ### Checking what users are in an Active Directory group
 `Get-ADGroupMember <AD group> | select name`
 
 Example: `Get-ADGroupMember Contractors | select name`
-* Get all members of the `Contractors` AD group, then from that list only output the names.
+* Gets all members of the `Contractors` AD group, then from that list only output the names.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
