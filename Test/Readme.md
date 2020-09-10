@@ -1,1 +1,4 @@
-# Test
+---
+layout: page
+title: TESTING
+---
