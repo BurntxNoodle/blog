@@ -36,7 +36,7 @@ This page will contain a high-level overview of general attack paths, vectors an
 
 ## Discovery
 
-* [[Linux] Checking listening ports](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#check-listening-ports)
+* [[Linux] Check listening ports](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#check-listening-ports)
 * [Linux] Checking for files owned/accessible
 * [[Windows] Checking what groups a user is in](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-what-groups-a-user-is-in)
 * [[Windows] Checking what users are in an Active Directory group](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-what-users-are-in-an-active-directory-group)
@@ -195,7 +195,7 @@ reset; sh 1>&0 2>&0
 
 # Discovery
 
-### Checking listening ports
+### Check listening ports
 `netstat -tulp`
 * Utilizes the netstat command to look for tcp (the `t` in the command) and udp (the `u` in the command) ports that are listening (`l`) and prints output with program names (the `p`)
 
