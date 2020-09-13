@@ -38,7 +38,7 @@ This page will contain a high-level overview of general attack paths, vectors an
 
 * [[Linux] Checking ports that are listening](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-ports-that-are-listening)
 * [[Linux] Finding files owned by a specific user](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#finding-files-owned-by-a-specific-user)
-* [Linux] Finding files owned by a specific group
+* [[Linux] Finding files owned by a specific group](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#finding-files-owned-by-a-specific-group)
 * [[Windows] Checking what groups a user is in](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-what-groups-a-user-is-in)
 * [[Windows] Checking what users are in an Active Directory group](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-what-users-are-in-an-active-directory-group)
 
@@ -216,7 +216,13 @@ reset; sh 1>&0 2>&0
 `find <directory> -user <user> 2>&1 | grep -v "Permission denied" | grep -v "/proc/"`
 
 Example: `find / -user jimmy 2>&1 | grep -v "Permission denied" | grep -v "/proc/"`
-* finds all files starting from the directory `/` (that's the root directory - the top most level directory of the linux system) that is owned by the user `jimmy`. The output is piped into a couple `grep -v` commands to exclude lines that contain `Permission denied` and `/proc/` since the first are inaccessible and `/proc/` contains information on running processes (usually not needed).
+* Finds all files starting from the directory `/` (that's the root directory - the top most level directory of the linux system) that is owned by the user `jimmy`. The output is piped into a couple `grep -v` commands to exclude lines that contain `Permission denied` and `/proc/` since the first are inaccessible and `/proc/` contains information on running processes (usually not needed).
+
+### Finding files owned by a specific group
+`find <directory> -group <group> 2>&1 | grep -v "Permission denied" | grep -v "/proc/"` 
+
+Example: `find / -group ftpusers`
+* Finds all files starting from the directory `/` that belongs to the group `ftpusers`.
 
 ### Checking what groups a user is in 
 `net user <user> /domain`
