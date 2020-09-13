@@ -2,7 +2,7 @@
 layout: page
 title: Attack Paths and Commands
 ---
-Last updated: 9/11/2020
+Last updated: 9/13/2020
 
 # 🚧 Project in progress 🚧
 
@@ -21,7 +21,7 @@ This page will contain a high-level overview of general attack paths, vectors an
 * [Using wfuzz to find subdomains](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-wfuzz-to-find-subdomains)
 * [Using sublist3r to find subdomains](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-sublist3r-to-find-subdomains)
 
-## Initial Access, Execution
+## Initial Access, Exploit Execution
 
 * Check for SQL injection
 * [Windows] Is SMB exposed (eternal blue)
@@ -37,7 +37,8 @@ This page will contain a high-level overview of general attack paths, vectors an
 ## Discovery
 
 * [[Linux] Checking ports that are listening](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-ports-that-are-listening)
-* [Linux] Checking for files owned/accessible
+* [[Linux] Finding files owned by a specific user](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#finding-files-owned-by-a-specific-user)
+* [Linux] Finding files owned by a specific group
 * [[Windows] Checking what groups a user is in](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-what-groups-a-user-is-in)
 * [[Windows] Checking what users are in an Active Directory group](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-what-users-are-in-an-active-directory-group)
 
@@ -56,7 +57,11 @@ This page will contain a high-level overview of general attack paths, vectors an
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
 </p>
 
+
+
 # Reconnaissance and Enumeration Commands
+
+
 
 ### General nmap scan
 `nmap -sC -sV -oA <name> <address>`
@@ -172,7 +177,11 @@ Example: `python3 sublist3r.py -d cyberspacekittens.com`
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
 </p>
 
+
+
 # Privilege Escalation Commands
+
+
 
 ### Checking sudo commands that do not require password
 `sudo -l`
@@ -193,14 +202,24 @@ reset; sh 1>&0 2>&0
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
 </p>
 
+
+
 # Discovery
+
+
 
 ### Checking ports that are listening
 `netstat -tulp`
 * Utilizes the netstat command to look for tcp (the `t` in the command) and udp (the `u` in the command) ports that are listening (`l`) and prints output with program names (the `p`)
 
+### Checking for files owned by a specific user
+`find <directory> -user <user> 2>&1 | grep -v "Permission denied" | grep -v "/proc/"`
+
+Example: `find / -user jimmy 2>&1 | grep -v "Permission denied" | grep -v "/proc/"`
+* finds all files starting from the directory `/` (that's the root directory - the top most level directory of the linux system) that is owned by the user `jimmy`. The output is piped into a couple `grep -v` commands to exclude lines that contain `Permission denied` and `/proc/` since the first are inaccessible and `/proc/` contains information on running processes (usually not needed).
+
 ### Checking what groups a user is in 
-`net user <user name> /domain`
+`net user <user> /domain`
 
 Example: `net user ryan /domain`
 * Gets information on the user `ryan` on the primary domain. The groups will be listed under `Global Group Memberships` and/or `Local Group Memberships`.
