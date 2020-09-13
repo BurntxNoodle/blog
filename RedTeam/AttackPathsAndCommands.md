@@ -212,7 +212,7 @@ reset; sh 1>&0 2>&0
 `netstat -tulp`
 * Utilizes the netstat command to look for tcp (the `t` in the command) and udp (the `u` in the command) ports that are listening (`l`) and prints output with program names (the `p`)
 
-### Checking for files owned by a specific user
+### Finding files owned by a specific user
 `find <directory> -user <user> 2>&1 | grep -v "Permission denied" | grep -v "/proc/"`
 
 Example: `find / -user jimmy 2>&1 | grep -v "Permission denied" | grep -v "/proc/"`
