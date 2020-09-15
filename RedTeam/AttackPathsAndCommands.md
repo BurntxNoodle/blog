@@ -22,6 +22,7 @@ This page will contain a high-level overview of general attack paths, vectors an
 * [Using sublist3r to find subdomains](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-sublist3r-to-find-subdomains)
 * If WordPress is used on the web app:
 	* [Using wpscan to enumerate users](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-wpscan-to-enumerate-users)
+	* [Using wpscan to enumerate plugins (find potential outdated plugins that can be exploited)](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-wpscan-to-enumerate-plugins)
 
 ## Initial Access, Exploit Execution
 
@@ -179,7 +180,24 @@ Example: `python3 sublist3r.py -d cyberspacekittens.com`
 `wpscan --url <address> --enumerate u`
 
 Example: `wpscan --url 10.10.10.37 --enumerate u`
-	* Enumerate users on the wordpress site on the ip address `10.10.10.37`.
+	* Enumerate users on the wordpress site on the address `10.10.10.37`.
+
+### Using wpscan to enumerate plugins
+`wpscan --url <address> --enumerate p`
+
+Example: `wpscan --url 10.10.10.37 --enumerate p`
+	* Enumerate plugins on the wordpress site on the address `10.10.10.37`.
+
+Example's output:
+```
+[+] We found 1 plugins:
+
+[+] Name: akismet - v3.3.2
+ |  Last updated: 2019-04-29T18:18:00.000Z
+ |  Location: http://10.10.10.37/wp-content/plugins/akismet/
+ |  Readme: http://10.10.10.37/wp-content/plugins/akismet/readme.txt
+[!] The version is out of date, the latest version is 4.1.1
+```
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
