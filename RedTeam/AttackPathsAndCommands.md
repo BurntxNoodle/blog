@@ -20,6 +20,8 @@ This page will contain a high-level overview of general attack paths, vectors an
 * [Using wfuzz to fuzz potential files or URIs](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-wfuzz-to-fuzz-potential-files-or-uris)
 * [Using wfuzz to find subdomains](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-wfuzz-to-find-subdomains)
 * [Using sublist3r to find subdomains](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-sublist3r-to-find-subdomains)
+* If WordPress is used on the web app:
+	* [Using wpscan to enumerate users](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-wpscan-to-enumerate-users)
 
 ## Initial Access, Exploit Execution
 
@@ -172,6 +174,12 @@ Example: `python3 sublist3r.py -d cyberspacekittens.com`
 
 * `python3 sublist3r.py`: This program is a python3 script, so use python3
 * `-d cyberspacekittens.com`: `-d` specifies the domain to check, in this example `cyberspacekittens.com`
+
+### Using wpscan to enumerate users
+`wpscan --url <address> --enumerate u`
+
+Example: `wpscan --url 10.10.10.37 --enumerate u`
+	* Enumerate users on the wordpress site on the ip address `10.10.10.37`.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
