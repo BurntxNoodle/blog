@@ -2,13 +2,15 @@
 layout: page
 title: Attack Paths and Commands
 ---
-Last updated: 9/13/2020
+Last updated: 9/18/2020
 
 # 🚧 Project in progress 🚧
 
 ## What is this page?
 
 This page will contain a high-level overview of general attack paths, vectors and commands that I've utilized from activities such as HackTheBox and VulnHub. For organization and ease of use, each of the attack paths and their commands are organized based on the [MITRE ATT&CK](https://attack.mitre.org/) framework.
+
+###### Note: These commands were all run on Kali Linux 2020.3
 
 ## Reconnaissance and Enumeration
 
@@ -20,9 +22,11 @@ This page will contain a high-level overview of general attack paths, vectors an
 * [Using wfuzz to fuzz potential files or URIs](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-wfuzz-to-fuzz-potential-files-or-uris)
 * [Using wfuzz to find subdomains](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-wfuzz-to-find-subdomains)
 * [Using sublist3r to find subdomains](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-sublist3r-to-find-subdomains)
+* [[Windows] Using enum4linux to enumerate SMB (Port 139/445)](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-enum4linux-to-enumerate-smb)
 * If WordPress is used on the web app:
 	* [Using wpscan to enumerate users](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-wpscan-to-enumerate-users)
 	* [Using wpscan to enumerate plugins (find potential outdated plugins that can be exploited)](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-wpscan-to-enumerate-plugins)
+
 
 ## Initial Access, Exploit Execution
 
@@ -175,6 +179,12 @@ Example: `python3 sublist3r.py -d cyberspacekittens.com`
 
 * `python3 sublist3r.py`: This program is a python3 script, so use python3
 * `-d cyberspacekittens.com`: `-d` specifies the domain to check, in this example `cyberspacekittens.com`
+
+### Using enum4linux to enumerate SMB
+`enum4linux <address>`
+
+Example: `enum4linux 10.10.10.169 > enum4linux_output.txt`
+	* Utilizes enum4linux to do SMB enumeration on the address 10.10.10.169 and outputs results into `enum4linux_output.txt`
 
 ### Using wpscan to enumerate users
 `wpscan --url <address> --enumerate u`
