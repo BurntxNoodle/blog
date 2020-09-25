@@ -9,8 +9,8 @@ Welcome to my CTF & Wargames page!
 
 * [What are CTFs?](https://securitynoodle.github.io/CTF/#what-are-ctfs)
 * [What are Wargames?](https://securitynoodle.github.io/CTF/#what-are-wargames)
-* [My Reverse Engineering Writeups](https://securitynoodle.github.io/CTF/#my-reverse-engineering-writeups)
-* [My Binary Exploitation (Pwn) Writeups](https://securitynoodle.github.io/CTF/#my-binary-exploitation-writeups)
+* [My Reverse Engineering Writeups](https://securitynoodle.github.io/CTF/ReverseEngineering/)
+* [My Binary Exploitation (Pwn) Writeups](https://securitynoodle.github.io/CTF/BinaryExploitation/)
 * [Other CTF Writeups](https://securitynoodle.github.io/CTF/#other-ctf-writeups)
 
 ## What are CTFs
@@ -23,11 +23,5 @@ Capture the Flags (CTFs) are (mostly) online competitions meant for cybersecurit
 ## What are Wargames
 Wargames usually have one theme/objective to learn that include several challenges that increases in difficulty as one progresses. Wargames can be about something as general as linux commands (such as [OverTheWire - Bandit](https://overthewire.org/wargames/bandit/) or more advanced with binary exploitation challenges. Most wargames I have encountered don't have a time limit whereas CTFs will run for a weekend usually. 
 
-## My Reverse Engineering Writeups
-(moving over soon - updated 9/23)
-
-## My Binary Exploitation Writeups
-(moving over soon - updated 9/23)
-
 ## Other CTF Writeups
-(moving over soon - updated 9/23)
+(moving over soon - updated 9/25)
