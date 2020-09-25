@@ -25,7 +25,7 @@ Wargames usually have one theme/objective to learn that include several challeng
 
 ## Other CTF Writeups
 * OverTheWire Bandit - Beginner level, great for learning the linux CLI (command line interface)
-  * [Bandit0 (getting connected])(https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit0/)
+  * [Bandit0 (getting connected)](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit0/)
   * [Bandit Level 0 to Level 1](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit0-1/)
   * [Bandit Level 1 to Level 2](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit1-2)
   * [Bandit Level 2 to Level 3](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit2-3)
