@@ -1,4 +1,7 @@
-# WarmUp - 50 PWN
+---
+layout: page
+title: WarmUp writeup - 50 point pwn challenge
+---
 
 ### Introduction/First look at the program
 This writeup will contain an in-depth guide for the challenge "WarmUp" from the CSAW 2016 qualifiers. I did not do this challenge when it was live but instead learned by using their archive of challenges at [365 CSAW](https://365.csaw.io/). Follow the instructions on the website if you want to register and try out these challenges yourself. It contains challenges from previous years that you can do yourself! Link is also found on the my main CTF repo.

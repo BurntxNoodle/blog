@@ -1,5 +1,7 @@
-# pilot Writeup
-
+---
+layout: page
+title: Pilot writeup - 75 point pwn challenge
+---
 ![pilot](https://user-images.githubusercontent.com/41026969/50910626-2e3dd000-13fc-11e9-8ec9-58243f541a8e.png)
 
 Ok so the description doesn't really give us much of anything, just an executable to work with and a ```nc``` address.

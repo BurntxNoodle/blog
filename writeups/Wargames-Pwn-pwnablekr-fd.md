@@ -1,4 +1,7 @@
-# fd writeup
+---
+layout: page
+title: fd writeup - challenge from pwnable.kr
+---
 
 First let's take a look at the challenge description says:
 
