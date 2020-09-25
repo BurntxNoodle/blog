@@ -24,4 +24,15 @@ Capture the Flags (CTFs) are (mostly) online competitions meant for cybersecurit
 Wargames usually have one theme/objective to learn that include several challenges that increases in difficulty as one progresses. Wargames can be about something as general as linux commands (such as [OverTheWire - Bandit](https://overthewire.org/wargames/bandit/) or more advanced with binary exploitation challenges. Most wargames I have encountered don't have a time limit whereas CTFs will run for a weekend usually. 
 
 ## Other CTF Writeups
-(moving over soon - updated 9/25)
+* OverTheWire Bandit - Beginner level, great for learning the linux CLI (command line interface)
+  * [Bandit0 (getting connected])(https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit0/)
+  * [Bandit Level 0 to Level 1](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit0-1/)
+  * [Bandit Level 1 to Level 2](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit1-2)
+  * [Bandit Level 2 to Level 3](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit2-3)
+  * [Bandit Level 3 to Level 4](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit3-4)
+  * [Bandit Level 4 to Level 5](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit4-5)
+  * [Bandit Level 5 to Level 6](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit5-6)
+  * [Bandit Level 6 to Level 7](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit6-7)
+  * [Bandit Level 7 to Level 8](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit7-8)
+  * [Bandit Level 8 to Level 9](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit8-9)
+  * [Bandit Level 9 to Level 10](https://securitynoodle.github.io/writeups/Wargames-CLI-OverTheWire-Bandit9-10)
