@@ -1,7 +1,7 @@
 # Setup
 title:               SecurityNoodle
 tagline:             'CompSci Student, Specialized in Security'
-description:         '<p style="color:white">Welcome to the page! Still in the process of moving writeups and notes to this page.</p>Most of the content here are about topics in information security. See below for the list of different sections. <br> <br> <a href="https://SecurityNoodle.github.io/" target="_blank">Click here</a> to go to the homepage.'
+description:         '<p style="color:white">Welcome to my webpage!</p>Most of the content here are about topics in information security. See below for the list of different sections. <br> <br> <a href="https://SecurityNoodle.github.io/" target="_blank">Click here</a> to go to the homepage.'
 url:                 
 baseurl:             '/'
 paginate:            5
