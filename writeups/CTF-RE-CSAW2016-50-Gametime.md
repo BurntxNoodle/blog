@@ -1,4 +1,7 @@
-# Gametime writeup - 50 points
+---
+layout: page
+title: Gametime Writeup - 50 Point RE Challenge
+---
 
 This is what the challenge description says:
 

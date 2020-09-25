@@ -1,4 +1,7 @@
-# TablEZ writeup - 100 point RE challenge
+---
+layout: page
+title: TablEZ writeup - 100 point RE challenge
+---
 
 The challenge description:
 
