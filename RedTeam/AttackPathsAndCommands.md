@@ -2,7 +2,7 @@
 layout: page
 title: Attack Paths and Commands
 ---
-Last updated: 9/18/2020
+Last updated: 10/6/2020
 
 # 🚧 Project in progress 🚧
 
