@@ -225,7 +225,7 @@ Example's output:
 
 ### List local users
 `cat /etc/passwd`
-	* Checks the `/etc/passwd` file for the list of users that are present on the system
+* Checks the `/etc/passwd` file for the list of users that are present on the system
 
 ### Checking ports that are listening
 `netstat -tulp`
@@ -256,10 +256,10 @@ Example: `Get-ADGroupMember Contractors | select name`
 * Gets all members of the `Contractors` AD group, then from that list only output the names.
 
 ### Using windows exploit suggester
-1) On the windows shell do `systeminfo`, save output
-2) On the kali (attacker) system, do `python windows-exploit-suggester.py --update` (should get an xls or xlsx file)
-3) On the kali (attacker) system, do `pip install xlrd`
-4) On the kali (attacker) system, do `python windows-exploit-suggester.py --database <.xls file> --systeminfo <systeminfo file>` 
+1. On the windows shell do `systeminfo`, save output
+2. On the kali (attacker) system, do `python windows-exploit-suggester.py --update` (should get an xls or xlsx file)
+3. On the kali (attacker) system, do `pip install xlrd`
+4. On the kali (attacker) system, do `python windows-exploit-suggester.py --database <.xls file> --systeminfo <systeminfo file>` 
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
