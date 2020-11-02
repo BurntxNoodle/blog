@@ -1,22 +1,14 @@
-# Burp Suite
-
-* [What is Burp Suite]()
-* [Setting up Burp Suite]()
-* [My Writeups That Used Burp Suite]()
-* [Sources]()
+* [What is Burp Suite?](https://securitynoodle.github.io/RedTeam/BurpSuite/#what-is-burp-suite)
+* [Setting up Burp Suite](https://securitynoodle.github.io/RedTeam/BurpSuite/#setting-up-burp-suite)
+* [My Writeups That Used Burp Suite](https://securitynoodle.github.io/RedTeam/BurpSuite/#my-writeups-that-used-burp-suite)
+* [Sources](https://securitynoodle.github.io/RedTeam/BurpSuite/#sources)
 
 ## What is Burp Suite?
 Burp Suite (also referred to as just "Burp") is a popular penetration testing tool which is often used for gathering information about web applications. This tool is meant to be used hands-on as the user controls the actions that are performed, mainly the ability to pass HTTP requests between the Burp tools in order to accomplish specific tasks that are relevant to the penetration test. There are several sub tools within Burp such as Scanner, Intruder, Decoder, and Comparer. However one of particular interest is the Repeater tool which is used to manually modify and HTTP requests.
 
 ## Setting up Burp Suite
 ##### This is set up in the Kali Linux 2020 operating system
-1. A JRE warning might popup saying:
-```
-Your JRE appears to be version X from Debian
-Burp has not been fully tested on this platform and you may experience problems
-```
-
-Just click `Ok`
+1. A JRE warning might popup saying `Your JRE appears to be version X from Debian. Burp has not been fully tested on this platform and you may experience problems`. Just click `Ok`
 
 2. Accept Terms and Conditions
 
