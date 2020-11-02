@@ -1,3 +1,5 @@
+# Burp Suite
+
 * [What is Burp Suite?](https://securitynoodle.github.io/RedTeam/BurpSuite/#what-is-burp-suite)
 * [Setting up Burp Suite](https://securitynoodle.github.io/RedTeam/BurpSuite/#setting-up-burp-suite)
 * [My Writeups That Used Burp Suite](https://securitynoodle.github.io/RedTeam/BurpSuite/#my-writeups-that-used-burp-suite)
