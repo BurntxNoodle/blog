@@ -12,10 +12,12 @@ title: HackTheBox
 Below is a list of HackTheBox writeups that I have written along with it's general difficulty based on HackTheBox user ratings (noob, easy, medium, hard):
 
 * [Access (easy-medium)](https://securitynoodle.github.io/RedTeam/HackTheBox/#hackthebox-access)
+* [Active (easy-medium)](https://securitynoodle.github.io/RedTeam/HackTheBox/#hackthebox-active)
 * [Bashed (noob)](https://securitynoodle.github.io/RedTeam/HackTheBox/#hackthebox-bashed)
 * [Beep (easy)](https://securitynoodle.github.io/RedTeam/HackTheBox/#hackthebox-beep)
 * [Blocky (easy)](https://securitynoodle.github.io/RedTeam/HackTheBox/#hackthebox-blocky)
 * [Blue (noob)](https://securitynoodle.github.io/RedTeam/HackTheBox/#hackthebox-blue)
+* [Celestial (medium)](https://securitynoodle.github.io/RedTeam/HackTheBox/#hackthebox-celestial)
 * [Devel (easy)](https://securitynoodle.github.io/RedTeam/HackTheBox/#hackthebox-devel)
 * [Grandpa (easy)](https://securitynoodle.github.io/RedTeam/HackTheBox/#hackthebox-grandpa)
 * [Granny (easy)](https://securitynoodle.github.io/RedTeam/HackTheBox/#hackthebox-granny)
@@ -42,6 +44,26 @@ Below is a list of HackTheBox writeups that I have written along with it's gener
 Access is an easy-medium level HackTheBox machine that involves gaining an initial foothold by finding data that's available by a public facing service. Using `mdb-tables`, I was able to export the Microsoft Database entries where afterwards, I did some simple bash scripting to find some clear passwords that allowed me to logon as a low privileged user. To privesc, a `runas /savecred` vulnerability was abused to run an executable as Administrator.   
 
 Read the full writeup [here](https://securitynoodle.github.io/writeups/HTB-Access/).
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
+</p>
+
+### HackTheBox Active
+
+HackTheBox Active is a fairly easy box but still goes over a topic that can be complex which is Windows Active Directory. By doing this box, I was first able to get more comfortable doing recon on Windows environments (more specifically enumerating SMB). During the privilege escalation part, I learned the basics of how Active Directory works, along with one way of exploiting its functionality. Doing so, I got experience with [Impacket](https://github.com/SecureAuthCorp/impacket) and a couple modules that are included within it.
+
+The key components to exploiting this box are as follows:
+
+- First realizing that SMB is open on ports 139/445
+- Finding out the Replication share can be accessed anonymously, allowing to view the contents without any credentials
+- Obtaining the ```Groups.xml``` file which contains an AES encrypted password
+- Decrypting the password allows to login with a valid set of credentials
+- Finding out that a service ticket can be obtained due to having a valid set of credentials (Kerberoast)
+- Obtaining service ticket gets a hash that can be cracked offline using John the Ripper
+- Once the hash is cracked, using [Impacket’s](https://github.com/SecureAuthCorp/impacket) ```wmiexec.py``` or ```psexec.py``` can be used to access the system as Administrator
+
+Read the full writeup [here on my medium blog](https://securitynoodle.medium.com/hackthebox-active-writeup-57f294424435)!
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
@@ -83,6 +105,22 @@ Read the full writeup [here](https://securitynoodle.github.io/writeups/HTB-Block
 Blue is a very simplistic machine to exploit which highlights the seriousness of the EternalBlue exploit (thus the name of this challenge). Reading about it [here on the wiki](https://en.wikipedia.org/wiki/EternalBlue) I learned that EternalBlue was used in widespread attacks such as the WannaCry ransomeware attack in 2017. Due to the way SMBv1 in multiple versions of Microsoft Windows handles specifically crafted packets from this attack, it allows remote code execution on the target computer. [CVE link and information here](https://www.cvedetails.com/cve/CVE-2017-0143/)
 
 Read the full writeup [here](https://securitynoodle.github.io/writeups/HTB-Blue/).
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
+</p>
+
+### HackTheBox Celestial
+
+This is a medium level HackTheBox machine that involves around a deserialization exploit for Node.js that lead to getting an initial access point on the machine. Afterwards, gaining a root shell was very simplistic due to misconfigurations. The main components of gaining unauthorized root access is as follows:
+
+- Burpe Suite was utilized to receive a cookie which was then discovered to be editable before forwarding the web request.
+- Since it was possible to edit the cookie (essentially user input) that passes information to a function that utilizes the eval() function.
+- A custom, serialized payload in Node.js had to be created. Once it has been created, encoding it to the cookie format and forwarding the web request was done to achieve an initial foothold.
+- Afterwards, a cron job that runs every 5 minutes was found running a python script as root. Even though the script was running as root, it was owned by the user that was compromised by the initial foothold.
+- Edit/upload a new script that generates a reverse shell as root.
+
+Read the full writeup on [my medium blog post!](https://securitynoodle.medium.com/hackthebox-celestial-writeup-1a2022427c50)
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/41026969/89838415-2cd50c00-db39-11ea-824b-8ef86b869974.png" />
