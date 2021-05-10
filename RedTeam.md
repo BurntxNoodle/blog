@@ -44,7 +44,7 @@ To practice offensive security, there are a couple great sites to hone and impro
 
 Writeups can only be done on retired machines, below is the link for HackTheBox writeups I've done. Reading walkthroughs is great for developing methodology, enhancing skills, and it exposes you to different tools and exploits. Alternatively you can go to the [main page](https://securitynoodle.github.io/) and see the most recent posts and activities that may include HackTheBox writeups. 
 
-[Click here](https://securitynoodle.github.io/HackTheBox/) to get to my HackTheBox page.
+[Click here](https://securitynoodle.github.io/RedTeam/HackTheBox/) to get to my HackTheBox page.
 
 <br>
 
